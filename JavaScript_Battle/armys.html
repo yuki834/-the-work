@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボス前</title>
+    <link rel="stylesheet" href="armys.css">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="これはJS課題作品です">
+</head>
+
+<body>
+    <div id="big"><img id="haikei" src="images/alert.gif" alt=""></div>
+    <main>
+        <div class="armyside">
+            <div class="hyouzi">
+
+                <div class="status">
+                    <!-- ここから1体目 -->
+                    <h2 id="armyName01"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentArmy01Hp" class="parameta"></div>
+                        <div id="maxArmy01Hp" class="parameta"></div>
+                    </div>
+                    <div class="gazou">
+                        <img id="army-gazou01" class="gazou02" src="images/golem.png" alt="まおー">
+                    </div>
+                </div>
+                <!-- ここまで１体目 -->
+
+                <div class="status">
+                    <!-- ここから2体目 -->
+                    <h2 id="armyName02"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentArmy02Hp" class="parameta"></div>
+                        <div id="maxArmy02Hp" class="parameta"></div>
+                    </div>
+                    <div class="gazou">
+                        <img id="army-gazou02" class="gazou02" src="images/shadow.png" alt="まおー">
+                    </div>
+                </div>
+                <!-- ここまで2体目 -->
+
+                <div class="status">
+                    <!-- ここから3体目 -->
+                    <h2 id="armyName03"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentArmy03Hp" class="parameta"></div>
+                        <div id="maxArmy03Hp" class="parameta"></div>
+                    </div>
+                    <div class="gazou">
+                        <img id="army-gazou03" class="gazou02" src="images/dragon.png" alt="まおー">
+                    </div>
+                </div>
+                <!--ここまで3体目 -->
+
+                <div class="status">
+                    <!-- ここから4体目 -->
+                    <h2 id="armyName04"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentArmy04Hp" class="parameta"></div>
+                        <div id="maxArmy04Hp" class="parameta"></div>
+                    </div>
+                    <div class="gazou">
+                        <img id="army-gazou04" class="gazou02" src="images/necromancer.png" alt="まおー">
+                    </div>
+                </div><!-- ここまで4体目 -->
+            </div>
+        </div><!-- /.armySide -->
+        <div class="playerside">
+            <div class="hyouzi01">
+                <div class="gazou">
+                    <img id="yusya-tenmetu" class="gazou03" src="images/yusya.png" alt="勇者">
+                </div>
+                <div class="status">
+                    <h2 id="myName"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentMyHp" class="parameta"></div>
+                        <div id="maxMyHp" class="parameta"></div>
+                        <div class="parameta">MP</div>
+                        <div id="currentMyMp" class="parameta"></div>
+                        <div id="maxMyMp" class="parameta"></div>
+                    </div>
+                </div>
+                <div class="gazou">
+                    <img id="mg-tenmetu" class="gazou03" src="images/magician.png" alt="勇者">
+                </div>
+                <div class="status">
+                    <h2 id="partnerName"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentPtHp" class="parameta"></div>
+                        <div id="maxPtHp" class="parameta"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="myInfo" class="myinfo"></div>
+
+            <select id="taisyo" class="taisyo">
+                <option value="army01">ゴーレム</option>
+                <option value="army02">シャドー</option>
+                <option value="army03">ドラゴン</option>
+                <option value="army04">ネクロ</option>
+            </select>
+
+            <div class="yontaku">
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+            </div>
+
+        </div><!-- /.playerside -->
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="armys.js"></script>
+</body>
+
+</html>

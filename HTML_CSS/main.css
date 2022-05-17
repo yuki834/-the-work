@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+* {/*すべてのボーダーボックスの大きさをマージン込みに変更*/
+	box-sizing: border-box;
+}
+
+html {
+	overflow: hidden;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+
+/*================================================================
+ index.html
+ =================================================================*/
+.topbody {
+    background-image: url(images/top2.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.hontitle {
+	font-size: 3rem;
+	font-family: 'Philosopher', serif;
+    font-weight: normal;
+}
+
+/*==============================================
+ここからハンバーガーメニューの作成
+=============================================================*/
+
+
+span {/*ボタンの下部中央配置*/
+	position: absolute;
+	/* width: 100px;
+	height: 35px; */
+	font-size: 25px;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(50%);
+	-webkit-transform: translateX(-50%);
+	border-radius: 5px;
+	background-color: #aaa;
+	cursor: pointer;
+}
+
+/* nav {見た目の成型１
+	width: 100px;
+	height: 35px;
+	background-color: #aaa;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;固定配置にする
+	bottom: -100px;
+	right: 0px;
+	text-align: center;
+} */
+
+span{
+/* nav span::before, */
+/* nav span::after 見た目の成型2 */
+	/* width: 30px;
+	height: 3px; */
+	/* background-color: #fff; */
+	display: block;
+	/* position: inherit;絶対値で配置する 今回は親要素navタグ内のfixedを基準にしている */
+	/* top: 2.5px;
+	left: 2.5px; */
+}
+
+/* nav span::before {見た目の成型3
+	top:13px;
+	left: 0;
+} */
+
+/* nav span::after {見た目の成型4
+	top: 26px;
+	left: 0;
+} */
+
+#open-close{/*チェックボックスをなくす*/
+	display: none;
+}
+
+.image {/* 初期配置の設定*/
+	width: 100%;
+	margin: 0;
+	background-color: rgba(169, 169, 169, 0.2);
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: space-between; */
+	/* padding: 0 10px; */
+	position: absolute;
+	/* bottom: 100px; */
+	right: -100%;
+	z-index: 999;
+}
+
+/* #menu の代わりに .i1 を使用 */
+#open-close:checked ~ .image {/*ハンバーガーアイコンがクリックされた際の動作*/
+	transition: all 1000ms 0s linear;/*1秒間に滑らかに登場させる*/
+	transform: translate(-100%);
+}
+
+#open-close ~ .image {/*ハンバーガーアイコンの表示されたリストを引っ込める*/
+	transition: all 1500ms 0s linear;
+	transform: translate(100%);
+}
+
+ /* .i1 a {表示された際のデザイン
+	padding: 3px 10px;
+	display: block;
+	background-color: rgba(200,255,198,0.5);
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	border-bottom: 1px solid #999;
+} */
+
+/* .i1 a:hover{表示されたリスト上にマウスポインタが乗っているときに動作
+	background-color: teal;
+	color: #fff;
+} */
+
+.i1 {
+	display: block;
+	color: black;
+	background-image: url(images/about.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-decoration: none;
+	font-weight: bold;
+	width: 50%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border: 1px solid black;
+
+}
+.i2 {
+	display: block;
+	color: black;
+	background-image: url(images/jump_player.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-decoration: none;
+	font-weight: bold;
+	width: 50%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border: 1px solid black;
+}
+.i3 {
+	display: block;
+	color: black;
+	background-image: url(images/jump-earphone.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-decoration: none;
+	font-weight: bold;
+	width: 50%;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border: 1px solid black;
+}
+.i4 {
+	display: block;
+	color: black;
+	background-image: url(images/contact.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-decoration: none;
+	font-weight: bold;
+	width: 50%;
+	height: 200px;
+	line-height: 300px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+/*==============================================
+ここまでハンバーガーメニューの作成
+=============================================================*/
+
+
+@media (max-width: 600px) {
+	html {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	span {
+		font-size: 15px;
+		position: fixed;
+		bottom: 10px;
+		align-items: center;
+		z-index: 999;
+	}
+	
+	.image {/* 初期配置の設定*/
+		flex-direction: column;
+		background-color: rgba(169, 169, 169, 0.2);
+		width: 100%;
+		right: -100%;
+		z-index: 998;
+	}
+	#open-close:checked ~ .image {/*ハンバーガーアイコンがクリックされた際の動作*/
+		transform: translate(-100%);
+	}
+	
+	#open-close ~ .image {/*ハンバーガーアイコンの表示されたリストを引っ込める*/
+		transform: translate(100%);
+	}
+/* 	
+	.i1 {
+		width: 50%;
+	}
+
+	.i2 {
+		width: 50%;
+	}
+
+	.i3 {
+		width: 50%;
+	}
+
+	.i4 {
+		width: 50%;
+	}*/
+
+	.i1, .i2, .i3, .i4 {
+		width: 100%;
+	}
+
+	.topbody {
+		background-image: url(images/top2.jpg);
+		background-size: cover;
+		background-repeat: repeat;
+		min-height: 100vh;
+	}
+
+} 

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+    margin-top: 0;
+}
+
+#big {
+    height: 100vh;
+}
+
+#haikei {
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.army .player {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+div h2 {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.army {
+    margin-bottom: 20px;
+}
+
+.hpMp {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hpMp>div:first-of-type,
+.hpMp>div:nth-of-type(4) {
+    margin-right: 5px;
+}
+
+.hpMp>div:nth-of-type(2)::after,
+.hpMp>div:nth-of-type(5)::after {
+    content: '/';
+    margin: 0 5px;
+}
+
+.hpMp>div:nth-of-type(3) {
+    padding-right: 20px;
+}
+
+.button {
+    margin: 10px auto 0;
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f44;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.button.deactive {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.yontaku {
+    display: flex;
+}
+
+.gazou02 {
+    width: 200px;
+}
+
+.gazou03 {
+    height: 200px;
+}
+
+.hyouzi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* margin: 0 auto; */
+}
+
+.hyouzi01 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.army {
+    text-align: right;
+}
+
+.myinfo {
+    border: 1px solid #333;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.parameta {
+    font-size: 20px;
+}
+
+#taisyo {
+    display: flex;
+    width: auto;
+    font-size: 20px;
+}

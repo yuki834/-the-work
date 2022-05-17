@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="boss.css">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="これはJS課題作品です">
+</head>
+
+<body>
+    <main>
+        <div class="army">
+            <div class="hyouzi">
+                <div class="status">
+                    <h2 id="armyName"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentArmyHp" class="parameta"></div>
+                        <div id="maxArmyHp" class="parameta"></div>
+                    </div>
+                </div>
+                <div class="gazou">
+                    <img id="army-gazou01" class="gazou02" src="images/mao.png" alt="まおー">
+                </div>
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="hyouzi01">
+                <div class="gazou">
+                    <img id="yusya-tenmetu" class="gazou03" src="images/yusya.png" alt="あぶないおじさん">
+                </div>
+                <div class="status">
+                    <h2 id="myName"></h2>
+                    <div class="hpMp">
+                        <div class="parameta">HP</div>
+                        <div id="currentMyHp" class="parameta"></div>
+                        <div id="maxMyHp" class="parameta"></div>
+                        <div class="parameta">MP</div>
+                        <div id="currentMyMp" class="parameta"></div>
+                        <div id="maxMyMp" class="parameta"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="myInfo" class="myinfo"></div>
+
+            <div class="yontaku">
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+                <button class="button"></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="boss.js"></script>
+</body>
+
+</html>
